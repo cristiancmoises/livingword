@@ -32,12 +32,21 @@ Get a preview at:
 
 ## Getting Started
 
-First, run the development server:
+Use Node.js 22.12 or later and the committed npm lockfile.
 
 ```bash
+npm ci --no-audit --no-fund
 npm run dev
-# or
-yarn dev
 ```
+
+Run the build and tests before submitting changes:
+
+```bash
+npm run build
+npm test
+npm run coverage
+```
+
+`npm test` runs once and exits. Use `npm run test:ui` for the interactive Vitest UI. Coverage uses the V8 provider; generated reports are ignored by Git.
 
 Your feedback and contributions are welcome!
